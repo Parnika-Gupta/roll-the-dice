@@ -1,0 +1,247 @@
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-container {
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  background: url(assets/background-image-tower-skyline.jpg) no-repeat center
+    center/cover;
+}
+
+.active-player-bg {
+  background-color: #efeded;
+  /* border: .1rem solid #9F9D9D; */
+}
+
+.players {
+  height: 75%;
+  max-height: 900px;
+  width: 75%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fffdfd;
+}
+
+.player {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  text-align: center;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.player h2 {
+  margin: 0;
+  font-size: 4rem;
+  font-weight: 200;
+  color: #919191;
+  text-transform: uppercase;
+}
+
+.global-score {
+  font-size: 10rem;
+  font-weight: 300;
+  color: #ffa792;
+  text-shadow: -0.7rem 0.7rem 0.7rem rgba(202, 90, 62, 0.4);
+}
+
+.round-score {
+  width: 30%;
+  height: 30%;
+  font-size: rem;
+  background-color: #ee8167;
+  border-radius: 10%;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.round-score h4 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #fffdfd;
+}
+
+.score {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #fffdfd;
+  padding-bottom: 2rem;
+}
+
+.game-controls {
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  height: 50%;
+
+  text-align: center;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dice-display {
+  font-size: 8rem;
+  color: #cc5887;
+  /* color: #cecece; */
+  -webkit-filter: drop-shadow(0 1rem 1.5rem rgba(202, 90, 62, 0.7));
+  filter: drop-shadow(0 1rem 1.5rem rgba(202, 90, 62, 0.7));
+}
+
+.dice-display i {
+  -webkit-animation: spin 400ms linear 1;
+  animation: spin 400ms linear 1;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.dice-display i:hover {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.game-controls > :not(.dice-display) {
+  color: #fffdfd;
+  -webkit-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.game-controls > :not(.dice-display):hover {
+  -webkit-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem);
+  -webkit-box-shadow: 0 0.7rem 0.7rem rgba(202, 90, 62, 0.3);
+  box-shadow: 0 0.7rem 0.7rem rgba(202, 90, 62, 0.3);
+}
+
+.game-controls button {
+  background-color: #ffa792;
+  border: none;
+  overflow: visible;
+  line-height: normal;
+
+  border-radius: 5rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.game-controls > :not(.dice-display):active {
+  -webkit-transform: translateY(-0.2rem);
+  -ms-transform: translateY(-0.2rem);
+  transform: translateY(-0.2rem);
+  -webkit-box-shadow: 0 0.4rem 0.4rem rgba(202, 90, 62, 0.5);
+  box-shadow: 0 0.4rem 0.4rem rgba(202, 90, 62, 0.5);
+}
+
+button:focus {
+  outline: 0;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}

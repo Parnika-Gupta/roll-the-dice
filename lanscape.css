@@ -1,0 +1,15 @@
+.players {
+  height: 100%;
+}
+
+.game-controls {
+  height: 70%;
+}
+
+.dice-display {
+  font-size: 5rem;
+}
+
+.game-controls button {
+  font-size: 1.5rem;
+}

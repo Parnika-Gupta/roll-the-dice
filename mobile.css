@@ -1,0 +1,54 @@
+.page-container {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.players {
+  height: 100%;
+  flex: 5;
+  flex-direction: column;
+}
+
+.active-player-bg {
+  flex-grow: 4;
+}
+
+.player:not(.active-player-bg) *:not(h2) {
+  display: none;
+}
+
+.active-player-bg *:not(h2) {
+  display: flex;
+}
+
+.player {
+  transition: all 600ms;
+}
+
+.player h2 {
+  font-size: 3rem;
+}
+
+.round-score {
+  width: 40%;
+}
+
+/* GAME CONTROLS */
+
+.game-controls {
+  position: inherit;
+  top: auto;
+  left: auto;
+  transform: none;
+  flex: 2;
+}
+
+.dice-display {
+  font-size: 5rem;
+}
+
+.game-controls button {
+  font-size: 1.5rem;
+}
